@@ -23,6 +23,36 @@
   width: 100%;
 }
 
+.details-of-movie h1{
+
+text-align: center;
+color: #ffb703;
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.details-of-movie img{
+
+  width: 40%;
+   float: left;
+   padding: 70px;
+  
+}
+
+.details-of-movie p{
+
+  vertical-align: middle;
+  align-items:center;
+  font-size: 30px;
+  color: aliceblue;
+  padding: 70px;
+  padding-top: 150px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

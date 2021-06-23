@@ -5,30 +5,37 @@ import { Header, SecondHeader, Details } from './Style';
 // Importing the Details of the movie details
 import MoviesDetails from './MoviesDetail';
 
+
 // importing the Data File
 import Movies from './Movies';
+
+import { useState } from 'react';
+
+
 
 
 
 const MovieGallery = (props) => {
+    const MovieList = Movies.map((movie) => <img className="Movie-image" alt={movie.name} src={movie.image} onClick={() => alert(movie.name)} />);
+    const [movie, setMovie] = useState(null);
 
-    const MovieList = Movies.map((movie) => <img className="Movie-image" alt={movie.name} src={movie.image} />);
-    const movies = Movies[0];
+    const setView = () => {
+        return movie ? (<Details><MoviesDetails movie={movie} setMovie={setMovie} /></Details>) : (<div className="gallery">
+            {MovieList}
+        </div>)
+    }
 
     return (
         <div>
             <Header> Movies Hall </Header>
             <SecondHeader>Click The Movie To Review The Details</SecondHeader>
-            <div className="gallery">
-                {MovieList}
-            </div>
-            <Details>
-                <MoviesDetails movies={movies} />
-            </Details>
-
+            {setView()}
         </div>
     )
 
 }
 
 export default MovieGallery;
+
+
+

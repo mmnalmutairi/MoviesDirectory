@@ -1,13 +1,14 @@
 import React from "react";
 
-const MoviesDetail = (props) => {
-    const movie = props.movie;
 
+const MoviesDetail = (props) => {
+
+    const movies = props.movies;
     return (
-        <div>
-            <h1>{movie.name}</h1>
-            <img src={movie.image} alt={movie.name} />
-            <p>{movie.description}</p>
+        <div className="details-of-movie">
+            <h1>{movies.name}</h1>
+            <img src={movies.image} alt={movies.name} />
+            <p>{movies.description}</p>
         </div>
     );
 
